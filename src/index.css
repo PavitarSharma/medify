@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.container {
+  @apply max-w-[1440px] w-full mx-auto px-4;
+}
+
+.gradient {
+  background: linear-gradient(
+    81deg,
+    #e7f0ff 9.01%,
+    rgba(232, 241, 255, 0.47) 89.11%
+  );
+}
+
+.adSwiper {
+  @apply relative  sm:h-[240px] h-[230px] mx-auto;
+}
+.adSwiper .swiper-pagination {
+  @apply absolute bottom-0;
+}
+.adSwiper .swiper-pagination .swiper-pagination-bullet {
+  @apply border border-transparent bg-transparent w-3.5 h-3.5 rounded-full relative before:content-[''] before:w-2 before:h-2 before:bg-gray-500 before:rounded-full before:absolute before:top-1/2 before:left-1/2 before:-translate-y-1/2 before:-translate-x-1/2;
+}
+.adSwiper .swiper-pagination .swiper-pagination-bullet-active {
+  @apply border border-primary bg-transparent w-3.5 h-3.5 rounded-full relative before:content-[''] before:w-2 before:h-2 before:bg-primary before:rounded-full before:absolute before:top-1/2 before:left-1/2 before:-translate-y-1/2 before:-translate-x-1/2;
+}
